@@ -18,4 +18,5 @@ target
 out/
 .DS_Store
 build
-/.slcache
+.gradle/
+build/

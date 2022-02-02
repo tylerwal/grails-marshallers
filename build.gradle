@@ -9,8 +9,8 @@ buildscript {
     }
 }
 
-version "0.1"
-group "grails.json.marshaller"
+version "4.0"
+group "org.grails.plugins.marshallers"
 
 apply plugin:"eclipse"
 apply plugin:"idea"

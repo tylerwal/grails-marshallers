@@ -28,7 +28,7 @@ Further documentation can be found on the GitHub repo.
     def profiles = []
 
     // URL to the plugin's documentation
-    def documentation = "http://grails.org/plugin/grails-json-marshaller"
+    def documentation = "http://grails.org/plugin/grails-marshallers"
 
     // Extra (optional) plugin metadata
 

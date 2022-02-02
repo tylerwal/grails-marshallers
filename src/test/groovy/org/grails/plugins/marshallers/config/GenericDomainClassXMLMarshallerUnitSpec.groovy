@@ -1,15 +1,12 @@
 package org.grails.plugins.marshallers.config
 
 import grails.converters.XML
-import grails.test.mixin.*
+//import grails.test.mixin.*
 
 import org.grails.web.converters.configuration.ConvertersConfigurationInitializer
-import org.grails.web.converters.exceptions.ConverterException
 import org.grails.plugins.marshallers.ExtendedConvertersConfigurationInitializer
 import org.grails.plugins.marshallers.GenericDomainClassXMLMarshaller
 import org.grails.plugins.marshallers.JsonMarshallerArtefactHandler
-import org.grails.web.converters.marshaller.NameAwareMarshaller
-import org.grails.web.converters.marshaller.ObjectMarshaller
 import org.grails.plugins.marshallers.XmlMarshallerArtefactHandler
 import spock.lang.Specification
 /**
@@ -18,7 +15,7 @@ import spock.lang.Specification
  *
  */
 
-@Mock([Invoice, Item])
+//@Mock([Invoice, Item])
 class GenericDomainClassXMLMarshallerUnitSpec extends Specification {
 
 	def invoice, item1, item2
@@ -364,20 +361,3 @@ class GenericDomainClassXMLMarshallerUnitSpec extends Specification {
 	}
 }
 
-class ItemMarshaller implements ObjectMarshaller<XML>, NameAwareMarshaller {
-    
-    @Override
-    public boolean supports(Object object) {
-        return object.class == Item
-    }
-
-    @Override
-    public void marshalObject(Object value, XML xml)    throws ConverterException {
-        xml.attribute('name', value.name)
-    }
-    
-    @Override
-    public String getElementName(Object value) {
-        return 'xxx'
-    }
-}

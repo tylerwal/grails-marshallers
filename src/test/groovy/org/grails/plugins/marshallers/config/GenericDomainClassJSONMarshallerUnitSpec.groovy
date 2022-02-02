@@ -1,7 +1,6 @@
 package org.grails.plugins.marshallers.config
 import grails.converters.JSON
-import grails.persistence.Entity
-import grails.test.mixin.*
+//import grails.test.mixin.*
 
 import org.grails.web.converters.configuration.ConvertersConfigurationInitializer;
 import org.grails.plugins.marshallers.ExtendedConvertersConfigurationInitializer
@@ -15,7 +14,7 @@ import spock.lang.Specification
  * @author dhalupa
  *
  */
-@Mock([Invoice, Item])
+//@Mock([Invoice, Item])
 class GenericDomainClassJSONMarshallerUnitSpec extends Specification {
 
 	def invoice, item1, item2
@@ -204,37 +203,4 @@ class GenericDomainClassJSONMarshallerUnitSpec extends Specification {
 		grailsApplication.mainContext.extendedConvertersConfigurationInitializer.initialize()
 	}
 }
-@Entity
-class Invoice {
-	private static _m={}
-	String name
-	boolean admin
-	Date created
 
-
-	static hasMany = [items: Item]
-
-	static def getMarshalling(){
-		return _m
-	}
-
-	static def setMarshalling(value){
-		_m=value
-	}
-}
-@Entity
-class Item {
-	static _m={}
-
-
-	float amount
-	String name
-
-	static def getMarshalling(){
-		return _m
-	}
-
-	static def setMarshalling(value){
-		_m=value
-	}
-}

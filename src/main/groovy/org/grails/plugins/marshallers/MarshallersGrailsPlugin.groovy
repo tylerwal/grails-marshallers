@@ -3,7 +3,7 @@ package org.grails.plugins.marshallers
 import grails.plugins.*
 import grails.util.GrailsUtil
 
-class GrailsJsonMarshallerGrailsPlugin extends Plugin {
+class MarshallersGrailsPlugin extends Plugin {
 
     def version = GrailsUtil.getGrailsVersion()
 

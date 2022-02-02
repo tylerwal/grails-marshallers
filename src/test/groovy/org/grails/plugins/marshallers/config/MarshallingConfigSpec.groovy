@@ -1,9 +1,9 @@
 package org.grails.plugins.marshallers.config
 
-import grails.test.mixin.*
+//import grails.test.mixin.*
 import spock.lang.Specification
 
-@TestMixin(MarshallerUnitSpecMixin)
+//@TestMixin(MarshallerUnitSpecMixin)
 class MarshallingConfigSpec extends Specification {
 	
     class A {

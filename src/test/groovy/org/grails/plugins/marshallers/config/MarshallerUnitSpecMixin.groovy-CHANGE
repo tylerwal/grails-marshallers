@@ -9,6 +9,7 @@ import org.junit.BeforeClass;
 
 import grails.test.mixin.support.GrailsUnitTestMixin;
 
+//class AuthorControllerTests extends Specification implements ControllerUnitTest<AuthorController>, DomainUnitTest<Author> {
 class MarshallerUnitSpecMixin extends GrailsUnitTestMixin{
 
 	
